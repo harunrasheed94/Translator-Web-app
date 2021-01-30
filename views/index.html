@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Translator Demo</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container-fluid" >
+  <div class="row">
+    <div class = "col-md-12" id="headingparentdiv">
+        <div id = "heading" class="headingcls"><h1>Translator</h1></div>
+      </div>
+    <div class="col-md-5"> 
+    <div id = "user1div" class="user1divcls">
+        <div id="user1namediv" class="usernamecls border border-light useractivecls red-tooltip" data-toggle="tooltip" title="Active User">User 1</div>
+        <div class="selectdivcls"> 
+         <select name="languages" class="langsel form-control selectcls" id = "language1" data-toggle="tooltip" data-placement="right" title="Select Language">
+           <option value="en">English</option>
+           <option value="fr">French</option>
+           <option value="ta">Tamil</option>
+           <option value="es">Spanish</option>
+           <option value="af">Afrikaans</option>
+           <option value="zh-Hans">Chinese Simplified</option>
+           <option value="zh-Hant">Chinese Traditional</option>
+           <option value="nl">Dutch</option>
+           <option value="de">German</option>
+           <option value="hi">Hindi</option>
+           <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="ml">Malayalam</option>
+          <option value="te">Telugu</option>
+          <option value="tr">Turkish</option>
+          </select>
+       </div>
+       <div class="textareaparentdiv">
+        <textarea id="user1text" class="textareacls" name="user1textarea" placeholder=""></textarea>
+          
+       </div>
+     </div>
+      <div id="conversationhistory" style="width: 260px;margin-top: 35px;margin-left: 7px;">
+     <div style="margin: 1px 3px;"><span style="font-family: Helvetica, sans-serif;font-size: 17px;color: white;">Conversation History</span></div>
+     <div id="convhistdispdiv" class="convhistdivdispcls border rounded bgchatimg" ></div>
+   </div>
+    </div>
+     
+    <div class="col-md-2">
+     <div id="translatediv" class="translatedivcls">
+           <button id="translate" class="btn btn-primary" type = "button">Translate</button>
+           </div>
+      <div id="swapdiv" style="float: right;margin-top: -40px;margin-right: 22px;">
+           <button id="swapbtn" class="btn btn-primary" type="button">Swap</button>
+           </div>
+    </div>
+    <div class="col-md-5">
+    	<div id = "user2div" class="user2divcls">
+      <div id="user2namediv" class="usernamecls border border-light userinactivecls" data-toggle="tooltip" title="Inactive User">User 2</div>
+      <div class="selectdivcls">
+        <select name="languages" class="langsel form-control  selectcls" id = "language2" data-toggle="tooltip" data-placement="right" title="Select Language">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="ta">Tamil</option>
+          <option value="es">Spanish</option>
+          <option value="af">Afrikaans</option>
+          <option value="zh-Hans">Chinese Simplified</option>
+          <option value="zh-Hant">Chinese Traditional</option>
+          <option value="nl">Dutch</option>
+          <option value="de">German</option>
+          <option value="hi">Hindi</option>
+          <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="ml">Malayalam</option>
+          <option value="te">Telugu</option>
+          <option value="tr">Turkish</option>         
+        </select>
+     </div>
+     <div class="textareaparentdiv"> 
+      <!--<label for="user1text">Type here:</label> !-->
+      <textarea disabled id="user2text" class="textareacls" name="user2textarea"></textarea>
+        
+     </div>
+   </div>
+           <div id="ratingdiv" class="ratingdivcls rounded border border-dark">
+             <div id="ratestarsdiv">
+               <div style="text-align:center;margin:2px 3px; padding: 2px 2px;font-size: large;">
+             Please rate the translation before the survey
+           </div>
+           <div class="rate">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="Excellent">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="Very good">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="good">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="Average">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="Poor">1 star</label>
+  </div>
+             </div>
+           
+         </div>
+      <div id="surveybutton" class="surveybuttoncls" >
+        <a href="#" id="surveylinkbtn" class="btn btn-info" role="button">Please complete the survey</a>
+         </div>
+    </div>
+  </div>
+</div>
+ <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> ! -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

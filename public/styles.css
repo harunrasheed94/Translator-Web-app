@@ -1,0 +1,197 @@
+body{
+  background-image: url('https://cdn.glitch.com/d6bb48a5-d9d3-4f2f-ab6b-1e045ba6c3fb%2F46a80351-a62c-4d69-a548-fcb618895c71.image.png?v=1611556078248');
+}
+
+#headingparentdiv{
+ text-align:center;
+}
+
+.tooltip-inner {
+    background-color: #ffffff;
+    color: black;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #ffffff !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-right-color: #ffffff !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-right-color: #ffffff !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-right-color: #ffffff !important;
+}
+
+.headingcls{
+    color: white;
+    height: 90px;
+    padding: 20px 32px;
+}
+
+.user1divcls{
+    height: 180px;
+    margin: 5px;
+    width: 450px;
+}
+
+.user2divcls{
+    height: 180px;
+    margin: 5px;
+    width: 450px;
+}
+
+
+.usernamecls{
+    margin: 2px 3px;
+    width: 60px;
+    padding: 2px 3px;
+}
+
+.useractivecls{
+    background-color: rgb(6, 110, 6);
+    color: white; 
+}
+
+.userinactivecls{
+    background-color: rgb(199, 10, 10);
+    color: white;
+}
+
+.selectdivcls{
+  height: 40px;
+  margin: 3px 2px;
+  width: 80%;
+}
+
+.selectcls {
+  width: 48%;
+}
+
+.textareaparentdiv{
+    height: 70%;
+    width: 95%;
+    margin: 2px 2px;
+}
+
+textarea{
+  padding: 2px 2px;
+  width: 96%;
+  height: 80%;
+  overflow: auto;
+  resize: none;
+}
+
+textarea:hover:disabled{
+  cursor:not-allowed;
+}
+
+.convhistdivdispcls{
+    height: 242px;
+    background-color: white;
+    width: 200%;
+    overflow: auto;
+    margin: 2px 4px;
+}
+
+.translatedivcls{
+    width: 60%;
+    margin: 112px 5px 15px;
+    height: 5%;
+    
+}
+
+.hide{
+  display:none;
+}
+
+.surveybuttoncls{
+   margin-top: 30px;
+   margin-left: 4px;
+}
+
+select:hover{
+  cursor:pointer;  
+}
+
+
+.user2convhistdivcls{
+  float: right;
+  clear:both;
+}
+
+.user1convhistdivcls{
+    float: left;
+    clear:both
+}
+
+.colorblack{
+    color: black;
+}
+
+.convtextdiv{
+    max-width: 95%;
+    border: 2px ridge;
+    margin: 2px 1px;
+    padding: 3px 5px;
+}
+
+.ratingdivcls{
+    width: 79%;
+    height: 14%;
+    background-color: white;
+    color: black;
+    margin-top: 48px;
+    margin-left: 4px;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    margin-left: 114px;
+    margin-top: -11px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:rgb(56, 53, 53);
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.thanksratingcls{
+    text-align: center;
+    margin-top: 18px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: darkolivegreen;
+}
+
+.bgchatimg{
+  background-image: url('https://cdn.glitch.com/d6bb48a5-d9d3-4f2f-ab6b-1e045ba6c3fb%2F0af42ddf-e8f6-46f1-b650-578b2c34ae22.image.png?v=1611686677358');
+}
